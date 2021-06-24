@@ -2,7 +2,7 @@ First Example - Nginx
 
 ## Task
 
-`kubectl run nginx --image=nginx ` {{execute}}
+`kubectl run nginx --image=nginx`{{execute}}
 
-`kubectl get pods `{{execute}}
+`kubectl get pods`{{execute}}
 
