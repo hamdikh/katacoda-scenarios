@@ -24,6 +24,14 @@
       {
         "title": "Step 5 - Istio Gateway",
         "text": "step5.md"
+      },
+      {
+        "title": "Step 6 - Istio Destination Rules",
+        "text": "step6.md"
+      },
+      {
+        "title": "Step 7 - Istio Virtual Service",
+        "text": "step7.md"
       }
     ],
     "intro": {
