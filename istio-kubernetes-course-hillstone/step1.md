@@ -20,3 +20,13 @@ Once this is done, you need to verify the kubernetes _installation_ please type 
 
 `kubectl label namespace default istio-injection=enabled`{{execute}}
 
+`kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml`{{execute}}
+
+
+`kubectl get services `{{execute}}
+
+`kubectl get pods `{{execute}}
+
+`cat samples/bookinfo/networking/bookinfo-gateway.yaml `{{execute}}
+
+`kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml `{{execute}}
