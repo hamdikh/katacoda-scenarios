@@ -10,6 +10,7 @@ Once this is done, you need to verify the kubernetes _installation_ please type 
 
 `kubectl get node ` {{execute}}
 
+Step 1 - Install Istio
 
 `curl -L https://istio.io/downloadIstio | sh -` {{execute}}
 
@@ -20,9 +21,13 @@ Once this is done, you need to verify the kubernetes _installation_ please type 
 
 `kubectl label namespace default istio-injection=enabled ` {{execute}}
 
+Step 2 - First Example 
+
 `kubectl run nginx --image=nginx ` {{execute}}
 
 `kubectl get pods `{{execute}}
+
+Step 3 - The Bookinfo Example 
 
 `kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml ` {{execute}}
 
@@ -31,6 +36,8 @@ Once this is done, you need to verify the kubernetes _installation_ please type 
 `kubectl get pods `{{execute}}
 
 `kubectl exec "$(kubectl get pod -l app=ratings -o jsonpath='{.items[0].metadata.name}')" -c ratings -- curl -sS productpage:9080/productpage | grep -o "<title>.*</title>" ` {{execute}}
+
+Step 4 - Istio Gateway 
 
 `cat samples/bookinfo/networking/bookinfo-gateway.yaml ` {{execute}}
 
@@ -46,3 +53,5 @@ Once this is done, you need to verify the kubernetes _installation_ please type 
 `export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT ` {{execute}}
 
 `curl -s "http://${GATEWAY_URL}/productpage" | grep -o "<title>.*</title>" ` {{execute}}
+
+Step 5 - Istio Destination Rules 
