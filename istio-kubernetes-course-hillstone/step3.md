@@ -10,7 +10,7 @@ verify your pod using the following command
 
 `kubectl get pods`{{execute}}
 
-Hein ! how come ? what's going on ? why do we have two containers running ?
+Huh ! how come ? what's going on ? why do we have two containers running ?
 
 Let us inspect the pod
 

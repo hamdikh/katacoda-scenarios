@@ -9,3 +9,5 @@ First of all we need to configure our _kubernetes_ environment so all you need t
 Once this is done, you need to verify the kubernetes _installation_ please type the following **command**
 
 `kubectl get node`{{execute}}
+
+Wait until you get the control plane and the node Ready 
