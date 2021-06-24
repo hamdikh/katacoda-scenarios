@@ -4,10 +4,28 @@
   "difficulty": "beginner",
   "time": "15 minutes",
   "details": {
-    "steps": [{
-      "title": "Step 1 - Run Command",
+    "steps": [
+      {
+      "title": "Step 1 - Kubernetes Cluster Command",
       "text": "step1.md"
-    }],
+      },
+      {
+        "title": "Step 1 - Run Command",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2 - First Example - Nginx",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3 - The Bookinfo Example",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4 - Istio Gateway",
+        "text": "step4.md"
+      }
+    ],
     "intro": {
       "text": "intro.md",
       "credits": ""
