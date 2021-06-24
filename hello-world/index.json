@@ -1,8 +1,8 @@
 {
-  "title": "Hello World Scenario",
-  "description": "Your First Scenario",
+  "title": "Baby steps with Istio",
+  "description": "Service Mesh and Istio",
   "difficulty": "beginner",
-  "time": "2 minutes",
+  "time": "15 minutes",
   "details": {
     "steps": [{
       "title": "Step 1 - Run Command",
