@@ -2,28 +2,28 @@
   "title": "Baby steps with Istio",
   "description": "Service Mesh and Istio",
   "difficulty": "beginner",
-  "time": "15 minutes",
+  "time": "30 minutes",
   "details": {
     "steps": [
       {
-      "title": "Step 1 - Kubernetes Cluster Command",
+      "title": "Step 1 - Kubernetes Cluster",
       "text": "step1.md"
       },
       {
-        "title": "Step 1 - Run Command",
-        "text": "step1.md"
-      },
-      {
-        "title": "Step 2 - First Example - Nginx",
+        "title": "Step 2 - Install Istio",
         "text": "step2.md"
       },
       {
-        "title": "Step 3 - The Bookinfo Example",
+        "title": "Step 3 - First Example - Nginx",
         "text": "step3.md"
       },
       {
-        "title": "Step 4 - Istio Gateway",
+        "title": "Step 4 - The Bookinfo Example",
         "text": "step4.md"
+      },
+      {
+        "title": "Step 5 - Istio Gateway",
+        "text": "step5.md"
       }
     ],
     "intro": {

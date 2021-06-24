@@ -1,18 +1,12 @@
-Istio Gateway.
+The Bookinfo Example.
 
 ## Task
 
-`cat samples/bookinfo/networking/bookinfo-gateway.yaml ` {{execute}}
+`kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml ` {{execute}}
 
-`kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml ` {{execute}}
+`kubectl get services `{{execute}}
 
-`kubectl get gateway ` {{execute}}
+`kubectl get pods `{{execute}}
 
-`export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}') ` {{execute}}
-`export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].port}') ` {{execute}}
-`export SECURE_INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="https")].port}') ` {{execute}}
-`export TCP_INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="tcp")].port}') ` {{execute}}
+`kubectl exec "$(kubectl get pod -l app=ratings -o jsonpath='{.items[0].metadata.name}')" -c ratings -- curl -sS productpage:9080/productpage | grep -o "<title>.*</title>" ` {{execute}}
 
-`export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT ` {{execute}}
-
-`curl -s "http://${GATEWAY_URL}/productpage" | grep -o "<title>.*</title>" ` {{execute}}
